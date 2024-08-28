@@ -1,0 +1,65 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.alarm {
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  font-size: 0.8rem;
+  transform: translateX(-50%);
+  width: fit-content;
+  padding: 10px;
+  background-color: #d4d4d4;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+
+  .password {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d4d4d4;
+    cursor: text;
+  }
+  .btns {
+    display: flex;
+    gap: 10px;
+
+    #generate {
+      width: 75%;
+    }
+    div {
+      padding: 10px;
+      background-color: #d4d4d4;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes alarm-down {
+  0%,
+  100% {
+    top: -100px;
+  }
+
+  20%,
+  80% {
+    top: 50px;
+  }
+}
+
+@media (max-width: 610px) {
+  .alarm {
+    width: 100%;
+    font-size: 0.67rem;
+  }
+}
