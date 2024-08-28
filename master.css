@@ -3,7 +3,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+
+* {
+  user-select: none;
 }
 
 .alarm {
@@ -22,6 +27,23 @@ body {
   flex-direction: column;
   gap: 10px;
   width: 300px;
+
+  .contains {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      background-color: #d4d4d4;
+      border-radius: 10px;
+      padding: 10px;
+      text-transform: uppercase;
+
+      &.checked {
+        background-color: lime;
+      }
+    }
+  }
 
   .password {
     padding: 10px;
